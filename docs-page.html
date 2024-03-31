@@ -790,57 +790,54 @@ export default {
             </div>
             <div>
               <p class="pt-3 section-heading">
-               4) Reviews (Testimonials) Section
+               5) Contact Section
 
               </p>
               <p>
-                This section is for for displaying reviews or testimonials on a webpage. It imports various components and libraries to manage the review display and styling.
-              </p>
+                This Svelte component creates a contact section on a webpage where users can reach out to the website owner or service provider. It imports other components and data required for rendering the form and title.              </p>
               <h5 class="pt-3">
-                Review Display:
+                Title Component:
+              </h5>
+              <p>The component imports the <b>'Title' </b>component from the <b>'base'</b> directory, which is responsible for displaying the section title. The title displayed is "Contact us."</p>
+              <h5 class="pt-3">
+                Form Component:
+              </h5>
+              <ol>
+                <li>
+                  The component imports the <b>'Form'</b> component, from the <b>'base'</b> directory, which presumably contains the form structure and functionality for user input and submission.
+                </li>
+                <li>
+                  The <b>'servicesList'</b> variable is imported from the <b>'data.js'</b> which is located in <code>src/$lib/data.js</code> directory it contains data related to the services offered by the website or service provider.
+                </li>
+              </ol>
+              <h5 class="pt-3">
+                Form Structure:
+              </h5>
+              <ol>
+                <li>
+                  The form includes fields for selecting the project type from a dropdown menu and specifying the deadline using a date input field.
+                </li>
+                <li>
+                  The <b>'servicesList'</b> data is iterated over to populate the options in the project type dropdown menu.
+                </li>
+              </ol>
+             
+              <h5 class="pt-3">
+                Form Submission:
               </h5>
              
               <ol>
                 <li>
-                  Reviews are displayed using the <b>'ReviewCard'</b> component, which receives properties for the reviewer's name and their review content.
+                  Upon submission, the form data is sent to the specified action URL using the <b>'POST'</b> method.
                 </li>
                 <li>
-                  The <b>'reviews'</b>  data is sourced from the data.js file located in the <code>src/$lib/data.js</code> directory.
+                  Hidden input fields are included for additional form data, such as the next URL, subject, and other metadata.
                 </li>
                 <li>
-                  Reviews are iterated over using the <b>'#each'</b> block, and each review is rendered within a <b>'SplideSlide'</b> component.
-                </li>
-              
-              </ol>
-              <h5 class="pt-3">
-                Splide Slider:
-              </h5>
-              <ol>
-                <li>
-                  Reviews are organized and displayed within a slider implemented using the <b>'Splide'</b> component from the <b>'@splidejs/svelte-splide'</b> library <code>'npm @splidejs/svelte-splide'</code></li>
-                <li>
-                  The slider offers options for customization, such as setting the number of slides per view, autoplay behavior, slide transition speed, and responsiveness for different screen sizes.
-                </li>
-                <li>
-                  Breakpoints are defined to adjust the number of slides displayed at different viewport widths, ensuring optimal viewing experience across devices.</li>
-              </ol>
-             
-              <h5 class="pt-3">
-                Usage:
-              </h5>
-              <p>Steps to use this component into a webpage</p>
-              <ol>
-                <li>
-                  Include the provided Svelte component code within the desired section of the webpage.
-                </li>
-                <li>
-                  Ensure that the <b>'ReviewCard'</b> component and <b>'reviews'</b> data are appropriately imported and structured..
-                </li>
-                <li>
-                  Adjust the styling and customization options of the <b>'Splide'</b> slider as needed to match the design and functionality requirements of the webpage.
+                  Users can also click on the "WhatsApp Us" button to open a link to WhatsApp with the provided phone number at the end of URL in code.
                 </li>
               </ol>
-              <p>By integrating this review section, website owners can effectively showcase positive feedback and testimonials from satisfied customers, enhancing credibility and trustworthiness, and potentially influencing other visitors' perceptions and decisions.</p>
+              <p>By integrating this contact section, website owners can facilitate communication with users or potential clients, allowing them to inquire about services, request quotes, or provide feedback conveniently through the provided form or WhatsApp link.</p>
             </div>
               </section>
             </section>
