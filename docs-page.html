@@ -139,6 +139,9 @@
               <a class="nav-link scrollto" href="#header">Header</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link scrollto" href="#slot">Slot</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link scrollto" href="#footer">Footer</a>
             </li>
             <li class="nav-item section-title mt-3">
@@ -377,94 +380,116 @@ export default {
               <p class="pt-3 section-heading">
                1) Header (Navbar) 
               </p>
-              <p>
-                The Hero section serves as the prominent introductory element of
-                the webpage, designed to captivate the user's attention and
-                convey key messaging effectively. Structured within a section
-                tag, it adopts a responsive layout, ensuring optimal display
-                across various screen sizes.
-              </p>
+             
               <h5 class="pt-3">
-                Accessing the Static Folder
+                Header Section:
               </h5>
-              <p>
-                Users should locate the static folder within the project directory. This folder typically contains assets such as images, fonts, and other static files that are served directly to the client.
-              </p>
-              <h5 class="pt-3">
-                Replacing Images
-              </h5>
-              <p>
-                Users should locate the existing image files within the static folder, which are referenced in the <'img'> tags of the HTML code.
-                They can then replace these image files with their desired images, ensuring that the new images have the same file names.
-                After replacing the images, users should refresh the browser to see the updated images reflected in the Hero section.
-              </p>  
-              <h5 class="pt-3">
-                Modifying Text Content
-              </h5>
-              <p>
-                To change text displayed in the Hero section: <br/>
-              </p>
+             
               <ol>
                 <li>
-                  Users can directly edit the HTML content within the <'p'> and <'h1'> tags to update the text displayed on the webpage.
-                </li>
+                  The header includes a logo, navigation links, and buttons for WhatsApp and chat.                </li>
                
                 <li>
-                  They should locate the corresponding HTML file containing the Hero section code and open it using a text editor.
+                  Navigation links are contained within a flex container, which is hidden on smaller screens and revealed when the menu button is clicked.
                 </li>
                 <li>
-                  Within the HTML file, users can find the <'p'> and <'h1'> tags that contain the text content.
+                  The menu button toggles the visibility of the navigation links on smaller screens.
                 </li>
-                <li>
-                  By modifying the text within these tags, users can update the messaging to their desired content.
-                </li>
-                <li>
-                  After saving the changes to the HTML file, users should refresh the browser to see the updated text reflected in the Hero section.
-                </li>
+        
               </ol>
                 </p>
                <h5 class="pt-3">
-                Refreshing the Browser
+                Responsive (Toggle) Menu:
               </h5>
-              <p>
-               1) After making changes to the static folder or HTML files, users should refresh the browser to ensure that the updated images and text are displayed correctly on the webpage. 
+              <ol>
+                <li>
+                  The responsive menu is hidden by default and becomes visible when the menu button is clicked.               
+                <li>
+                  It contains navigation links for Home, Services, Reviews, and Contact Us.
+                </li>
+                <li>
+                  Additionally, it includes buttons for WhatsApp and chat.
+                </li>
+        
+              </ol>
+            </div>
+            <div id="slot" class="docs-article">
+              <p class="pt-3 section-heading">
+                2) Slot
               </p>
-               <p>
-                 2) They can do this by clicking the refresh button in the browser or by pressing the "Ctrl + R" or "Cmd + R" keyboard shortcut.
-               </p>
-              </p>
+              <ol>
+                <li>
+                  The <b><'slot'></b>  element in Svelte is used as a placeholder within a component to allow the insertion of content from outside the component.It acts as a receptacle for content provided by the parent component.
+                </li>
+                <li>
+                  When you place a <b><'slot'></b> element inside a component's template, it indicates where content from the parent component will be inserted.
+                </li>
+                <li>
+                  You can provide default content within the <b><'slot'></b>  element. This content will be displayed if the parent component doesn't provide any content for that slot.
+                </li>
+
+              </ol>
+              
+             
             </div>
             <div id="footer" class="docs-article">
               <p class="pt-3 section-heading">
-                2) Footer
+                3) Footer
               </p>
-              <p>
-               you can customize the text and images in the <b> "Our Assistance Service" </b> section, which includes Timeline components, follow these steps:
-              </p>
+              
               <h5 class="pt-3">
-                Modifying Timeline Components
+                Footer Section:
               </h5>
-              <p>
-                To change the content of each Timeline component:
-              </p> 
               <ol>
                 <li>
-                 Users can directly edit the attributes such as number, title, and description within each <b> <'Timeline'/></b> component.<br/>
+                  The footer includes the company logo, navigation links, services list, and contact information.
                 </li>
                 <li>
-                  These attributes control the display of information such as the step number, title, and description for each stage of the assistance process.<br/>
+                  Navigation links are categorized under "Company" and "Services".
                 </li>
                 <li>
-                  Users can update the values of these attributes to customize the text displayed in each Timeline component according to their requirements.<br/>
+                  Contact information includes email and chat options.
+                </li>
+                <li>
+                  A disclaimer and additional text content are provided.
+                </li>
+                <li>
+                  Copyright information is displayed at the bottom of the footer.
                 </li>
               </ol>
                
               <p>
                 By following these, users can easily customize the text and images displayed in the "Our Assistance Service" section, including the Timeline components and accompanying image, to align with their preferences and requirements.
               </p>
+
             </div>
-            
-            
+            <p class="pt-3 section-heading">
+              Additional
+            </p>
+
+              <h5 class="pt-3">
+                Script Section:
+              </h5>
+              <ol>
+                <li>
+                  The script section imports necessary components and data from the application.
+                </li>
+                <li>
+                  It also initializes variables for controlling the visibility of the service dropdown menu and the responsive menu.
+                </li>
+                <li>
+                  The year variable is set to the current year for displaying copyright information.
+                </li>
+               
+              </ol>
+              <h5 class="pt-3">
+                Style Section:
+              </h5>
+              <ol>
+                <li>
+                  The component's style includes responsive design and transitions for menu animations.
+                </li>
+              </ol>
               </div>
             </section>
             </article>
