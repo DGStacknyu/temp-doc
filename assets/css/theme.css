@@ -12035,7 +12035,7 @@ a.text-link:hover {
   padding-top: 2px;
 }
 .social-list li a {
-  color: #ef6223;
+  color: #01d0cf;
 }
 .social-list li a:hover {
   color: #ef6223;
@@ -12463,4 +12463,7 @@ a.text-link:hover {
     display: block;
     padding-top: 0.5rem;
   }
+}
+.st {
+  color: #02e6b3;
 }
