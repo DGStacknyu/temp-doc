@@ -12005,7 +12005,7 @@ a.text-link:hover {
 }
 .site-logo .logo-text {
   color: #252930;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 .site-logo .text-alt {
@@ -12146,9 +12146,8 @@ a.text-link:hover {
   width: 300px;
 }
 .docs-logo-wrapper {
-  position: absolute;
-  left: 15px;
-  top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 .docs-logo-wrapper .site-logo {
   display: inline-block;
