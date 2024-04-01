@@ -114,7 +114,7 @@
         <nav id="docs-nav" class="docs-nav navbar">
           <ul class="section-items list-unstyled nav flex-column pb-3">
             <li class="nav-item section-title">
-              <a class="nav-link scrollto " href="#section-1"
+              <a class="nav-link scrollto " href="#introduction"
                 ><span class="theme-icon-holder me-2"
                   ><i class="fas fa-map-signs"></i></span
                 >Introduction</a
@@ -122,7 +122,7 @@
             </li>
            
             <li class="nav-item section-title mt-3">
-              <a class="nav-link scrollto" href="#section-2"
+              <a class="nav-link scrollto" href="#installation"
                 ><span class="theme-icon-holder me-2"
                   ><i class="fas fa-arrow-down"></i></span
                 >Installation</a
@@ -194,7 +194,7 @@
               >
             </li>
             <li class="nav-item section-title mt-3">
-              <a class="nav-link scrollto" href="#section-8"
+              <a class="nav-link scrollto" href="#resources"
                 ><span class="theme-icon-holder me-2"
                   ><i class="fas fa-book-reader"></i></span
                 >Resources</a
@@ -863,98 +863,254 @@ export default {
   <header class="docs-header">
     <h1 class="docs-heading">Services Page</h1>
     <p>
-      The "Services" folder, which contains components related to the home page of the project, can be found at the following location within the project directory:
+      The "Services" folder, which contains components related to the services page of the project, can be found at the following location within the project directory:
     <code> src\lib\components\Services
     </code></p>
   </header>
+  <div>
+
+ 
+   <div id="ourservices" class="docs-article">
+  
+     <p>
+       This section of code represents the<b> "Our Services" </b> page, showcasing various services offered. The content is structured to include a title, description, and service cards, with data sourced from a JSON file.
+     </p>
+     <h5 class="pt-3">
+       Using the JSON Data File:
+     </h5>
+     <p>
+       Users can find the data file named data.js located in the following directory: <code>src\lib\data.js</code>
+     </p>
+     <p>
+       To modify the service data: 
+     </p>
+     <ol>
+       <li>
+         Open the <b>'data.js'</b> file using a text editor.
+       </li>
+       <li>
+         Each service is represented as an object within the <b>'services'</b> array.
+       </li>
+       <li>
+         Each service is represented as an object within the <b>'title'</b>,<b>'description'</b>,<b>'points'</b>,<b>'img'</b>,<b>'id'</b> and <b>'icon</b> properties of each service object to update the service information.
+       </li>
+       <li>
+         Ensure that the <b>'img'</b> property points to the correct image file path within the project's static folder.
+       </li>
+     </ol>
+     <h5 class="pt-3">
+       Using Mainservice Cards:
+     </h5>
+     <ol>
+       <li>Each service is displayed using a MainServicecard component.</li>
+       <li>Users can modify the service title, description, and associated image by updating the corresponding properties passed to the MainServicecard component.</li>
+       <li>The MainServicecard component is imported from the project's component directory, enabling easy customization of individual service cards.</li>
+     </ol>
+     <h5 class="pt-3">
+      Description MainserviceCard:
+    </h5>
+    <p>Props:</p>
+    <ol>
+      <li><b>id:</b> A unique identifier for the service.</li>
+      <li><b>title:</b> The title of the service.</li>
+      <li><b>description:</b> A brief description of the service.</li>
+      <li><b>points:</b> An array containing key points or features of the service.</li>
+      <li><b>img:</b> The image associated with the service.</li>
+    </ol>
+   <p>This card is located at <code>src\lib\components\Services\MainServiceCard.svelte</code></p>
+     <h5 class="pt-3">
+       Custom service section
+     </h5>
+     <p>The provided code represents a reusable modal component designed for users to contact service providers regarding a specific service offered on the website. This modal serves as a means for users to initiate communication with the service provider directly from the webpage, facilitating inquiries, consultations, or requests for additional information related to the particular service being showcased.
+
+     </p>
+     <p>
+       Customization: 
+     </p>
+     <ol>
+       <li>
+         Users can customize the content of the custom service section by providing values for the <b>'title'</b>,<b>'description'</b>,<b>'img'</b> and <b>'id'</b> attributes when using the component.
+       </li>
+       <li>
+         The form action URL <b>action="https://formsubmit.co/"</b> can be updated to direct form submissions to the desired endpoint.
+       </li>
+       <li>
+         Styling classes and attributes can be modified or extended to match the project's design requirements.
+       </li>
+       <li>
+         Users can include multiple instances of this component throughout their project, each with unique content and functionality.
+       </li>
+     </ol>
+   </div>
+
+   <div id="ctaservice" class="docs-article">
+     <p class="pt-3 section-heading">
+    Call to Action(CTA) Section
+
+     </p>
+     <p>
+       This section is a Svelte component responsible for displaying a limited-time offer section on a webpage. This section aims to attract users' attention with a compelling discount offer and encourage engagement through a countdown timer and a call-to-action button for initiating a chat.
+     </p>
+     <h5 class="pt-3">
+       Countdown Timer:
+     </h5>
+    
+     <ol>
+       <li>
+         The component initializes three variables <b>'hours'</b>,<b>'minutes'</b> and <b>'seconds'</b> representing the countdown time.
+       </li>
+       <li>
+         The <b>'startCountdown()'</b>  function is invoked to decrement the time values every second until the countdown reaches zero.
+       </li>
+       <li>
+         The countdown is displayed in a digital format with hours, minutes, and seconds using dynamic placeholders.
+       </li>
+     
+     </ol>
+     <h5 class="pt-3">
+       Content Section:
+     </h5>
+     <ol>
+       <li>The content section includes a heading with the limited-time offer message and a description highlighting the discount and urging users to take advantage of the offer.</li>
+       <li>An image depicting a student is displayed alongside the offer content to add visual appeal and context to the section.</li>
+     </ol>
+    
+     <h5 class="pt-3">
+       Customization:
+     </h5>
+     <p>To customize this component into a webpage</p>
+     <ol>
+       <li>
+         Include the provided Svelte component code within the desired section of the webpage.
+       </li>
+       <li>
+         Ensure that any necessary dependencies, such as the <b>@iconify/svelte</b> library, are installed and imported correctly.
+       </li>
+       <li>
+         Customize the offer message, description, and chat button functionality as needed to align with the specific promotional campaign or business requirements.
+       </li>
+     </ol>
+   </div>
+  
+  
+     </div>
 </article>
             <!--//section-->
             <article class="docs-article" id="reviews"> 
               <header class="docs-header">
                 <h1 class="docs-heading">Reviews Page</h1>
                 <p>
-                  The "Home" folder, which contains components related to the home page of the project, can be found at the following location within the project directory:
-                <code> src\lib\components\Home
+                  The "Reviews" folder, which contains components related to the reviews page of thew project, can be found at the following location within the project directory:
+                <code> src\lib\components\Reviews
                 </code></p>
+                <p>The Reviews Page component in this Svelte application showcases customer reviews and allows users to write their own reviews. Here's a breakdown of its functionality and structure:</p>
               </header>
+              <div>
+                <div id="" class="docs-article">
+                  <h5 class="pt-3">
+                    Review Rating Component:
+                  </h5>
+                  <ol>
+                    <li>
+                      Implements a star rating component using the <b>'StarRating'</b> component from the <b>@ernane/svelte-star-rating </b> package.
+                    </li>
+                    <li>
+                      Allows customization of star rating appearance and behavior through props.
+                    </li>
+                  </ol>
+                  <h5 class="pt-3">
+                    Review Card Component:
+                  </h5>
+                  <ol>
+                    <li>Represents an individual review card displaying the reviewer's name, date, rating, title, and review content.</li>
+                    <li>Utilizes the Icon component for displaying a user icon next to the reviewer's name.</li>
+                    <li>Utilizes the Rating component to display the star rating given by the reviewer.</li>
+                    <li>Reviews are displayed in a visually appealing card layout.</li>
+                  </ol>
+                  <h5 class="pt-3">
+                    File Locations:
+                  </h5>
+                 <ol>
+                <li>Reviews Page Component: <code>src\routes\(app)\reviews\+page.svelte</code></li>
+                <li>Review Rating Component: <code>src\lib\components\Reviews\rating.svelte</code></li>
+                <li>Review Card Component: <code>src\lib\components\Reviews\reviewsCards.svelte</code></li>
+                 </ol>
+                 <h5 class="pt-3">
+                  Customization:
+                </h5>
+                  <ol>
+                    <li>
+                      Functionality can be enhanced by adding features like pagination, sorting, or filtering based on user preferences.
+                    </li>
+                    <li>
+                      Users can customize the Reviews Page by modifying the content, styling, and functionality of individual components.
+                    </li>
+                    <li>
+                      To add or remove reviews, update the <b>reviews</b> data or integrate with an external data source.
+                    </li>
+                    <li>
+                      Styling can be adjusted by modifying the CSS classes or adding custom stylesheets.
+                    </li>
+                  </ol>
+                </div>  
+                  </div>
             </article>
             <article class="docs-article" id="Contact-Us"> 
               <header class="docs-header">
                 <h1 class="docs-heading">Contact-Us Page</h1>
                 <p>
-                  The "Home" folder, which contains components related to the home page of the project, can be found at the following location within the project directory:
-                <code> src\lib\components\Home
-                </code></p>
+                 For this please see the <a href="#contact">Contact-Us</a> section of Hero Page.
               </header>
             </article>
           <!--//docs-article-->
 
 
-          <article class="docs-article" id="section-8">
+          <article class="docs-article" id="resources">
             <header class="docs-header">
               <h1 class="docs-heading">Resources</h1>
               <section class="docs-intro">
                 <p>
-                  Section intro goes here. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Quisque finibus condimentum nisl
-                  id vulputate. Praesent aliquet varius eros interdum suscipit.
-                  Donec eu purus sed nibh convallis bibendum quis vitae turpis.
-                  Duis vestibulum diam lorem, vitae dapibus nibh facilisis a.
-                  Fusce in malesuada odio.
+                  Here's a Resources section that includes references to all the libraries and tools listed in your package.json:
                 </p>
               </section>
               <!--//docs-intro-->
             </header>
-            <section class="docs-section" id="item-8-1">
-              <h2 class="section-heading">Section Item 8.1</h2>
-              <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum
-                condimentum mauris, vitae facilisis leo. Aliquam sagittis purus
-                nisi, at commodo augue convallis id. Sed interdum turpis quis
-                felis bibendum imperdiet. Mauris pellentesque urna eu leo
-                gravida iaculis. In fringilla odio in felis ultricies porttitor.
-                Donec at purus libero. Vestibulum libero orci, commodo nec arcu
-                sit amet, commodo sollicitudin est. Vestibulum ultricies
-                malesuada tempor.
-              </p>
-            </section>
-            <!--//section-->
-
-            <section class="docs-section" id="item-8-2">
-              <h2 class="section-heading">Section Item 8.2</h2>
-              <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum
-                condimentum mauris, vitae facilisis leo. Aliquam sagittis purus
-                nisi, at commodo augue convallis id. Sed interdum turpis quis
-                felis bibendum imperdiet. Mauris pellentesque urna eu leo
-                gravida iaculis. In fringilla odio in felis ultricies porttitor.
-                Donec at purus libero. Vestibulum libero orci, commodo nec arcu
-                sit amet, commodo sollicitudin est. Vestibulum ultricies
-                malesuada tempor.
-              </p>
-            </section>
-            <!--//section-->
-
-            <section class="docs-section" id="item-8-3">
-              <h2 class="section-heading">Section Item 8.3</h2>
-              <p>
-                Vivamus efficitur fringilla ullamcorper. Cras condimentum
-                condimentum mauris, vitae facilisis leo. Aliquam sagittis purus
-                nisi, at commodo augue convallis id. Sed interdum turpis quis
-                felis bibendum imperdiet. Mauris pellentesque urna eu leo
-                gravida iaculis. In fringilla odio in felis ultricies porttitor.
-                Donec at purus libero. Vestibulum libero orci, commodo nec arcu
-                sit amet, commodo sollicitudin est. Vestibulum ultricies
-                malesuada tempor.
-              </p>
-            </section>
-            <!--//section-->
+            <div>
+              <div id="" class="docs-article">
+                <h5 class="pt-3">
+                  Documentation
+                </h5>
+                <ol>
+                  <li>
+                    <a href="https://kit.svelte.dev/docs/introduction">SvelteKit Documentation</a>
+                  </li>
+                  <li>
+                    <a href="https://vitejs.dev/guide/">Vite Documentation</a>
+                  </li>
+                  <li>
+                    <a href="https://tailwindcss.com/docs/installation">tailwindcss Documentation</a>
+                  </li>
+                </ol>
+                <h5 class="pt-3">
+                  Additional Tools:
+                </h5>
+                <ol>
+                  <li>
+                    <a href="https://github.com/sveltejs/kit/tree/main/packages/create-svelte">SvelteKit Starter Template</a>
+                  </li>
+               <li>
+                <a href="https://github.com/ErnaneJ/svelte-star-rating">Ernane's Svelte Star Rating</a>
+               </li>
+               <li>
+                <a href="https://iconify.design/docs/">Iconify Svelte Documentation</a>
+               </li>
+                </ol>
+               
+              </div>  
+                </div>
+       
           </article>
-          <!--//docs-article-->
-
-          
-          <!--//docs-article-->
-
+        
           <footer class="footer">
             <div class="container text-center py-5">
               <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
